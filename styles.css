@@ -24,17 +24,22 @@ header {
     align-items: center;
 }
 
+/* Main menu container */
 .nav-menu {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+    position: relative; /* Set relative positioning for parent container */
 }
 
+/* Main menu items */
 .nav-menu li {
+    position: relative; /* Anchor for dropdown */
     margin-left: 10px;
 }
 
+/* Main menu links */
 .nav-menu a {
     text-decoration: none;
     color: #000;
@@ -42,9 +47,60 @@ header {
     transition: color 0.3s, background-color 0.3s;
 }
 
+/* Hover effects for main menu links */
 .nav-menu a:hover {
     color: red;
     background-color: transparent;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aligns the dropdown directly below the parent */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    min-width: 180px; /* Set a minimum width for the dropdown */
+}
+
+/* Style for dropdown items */
+.dropdown-menu li {
+    padding: 0; /* Remove extra padding from list items */
+}
+
+/* Style for dropdown links */
+.dropdown-menu a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effects for dropdown links */
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+    color: red;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Fix for disappearing issue */
+.nav-menu > li {
+    position: relative; /* Ensure parent li has position to anchor the dropdown */
 }
 
 .social-media-icons {
