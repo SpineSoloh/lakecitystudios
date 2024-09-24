@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake City Music School</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: white;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.bg-light {
+    background-color: #ecf0f1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.program-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card h3 {
+    color: #2C3E50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="LCLogo.PNG" alt="Home" class="logo">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="Tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rate-card.html">Recording Studio</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="about-us" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Lake City Music School, a leading center for music education and training based in Kisumu. Founded in 2022, our institute is dedicated to nurturing the next generation of musicians, performers, composers, and educators.</p>
+            <p>Our programs cater to students of all ages and skill levels, from beginners to advanced musicians, offering courses in a wide range of instruments, music theory, composition, production, and performance.</p>
+        </div>
+    </section>
+
+    <section id="mission" class="section bg-light">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Lake City Music School, our mission is to inspire and educate students by fostering creativity, discipline, and excellence in the field of music. We strive to provide a nurturing environment that supports students in achieving their musical and personal goals.</p>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <div class="container">
+            <h2>Programs and Courses</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3>Instrumental Training</h3>
+                    <p>Professional instruction in piano, guitar, violin, drums, wind instruments, and more, led by expert musicians.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Voice Lessons</h3>
+                    <p>Vocal training that focuses on technique, tone, and stage presence, with specialized coaching for various music genres.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Music Theory & Composition</h3>
+                    <p>Courses covering the foundations of music theory, harmony, ear training, and songwriting.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Music Production & Technology</h3>
+                    <p>Learn the art of music production, sound engineering, and digital music creation using industry-standard software.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Performance Arts</h3>
+                    <p>Ensemble classes, bands, and choirs that provide students with live performance opportunities and stage experience.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Jazz, Classical, and Contemporary Programs</h3>
+                    <p>Specialized programs focusing on specific music genres and styles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="section bg-light">
+        <div class="container">
+            <h2>Our Facilities</h2>
+            <p>Lake City Music School offers top-notch facilities to enhance the learning experience, including a fully equipped recording studio, soundproofed practice rooms, an instrument library, and a technology lab.</p>
+        </div>
+    </section>
+
+    <section id="faculty" class="section">
+        <div class="container">
+            <h2>Meet Our Faculty</h2>
+            <p>Our faculty consists of highly qualified and experienced musicians, educators, and industry professionals dedicated to helping students achieve their full potential.</p>
+            <ul>
+                <li><strong>Faculty Member 1</strong> – Head of Instrumental Studies</li>
+                <li><strong>Faculty Member 2</strong> – Head of Vocal Department</li>
+                <li><strong>Faculty Member 3</strong> – Music Production and Technology Instructor</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contact" class="section footer">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to start your musical journey? Get in touch to learn more or schedule a tour of our facilities.</p>
+            <p>Email: info@lakecitymusicschool.com</p>
+            <p>Phone: +254-700-000000</p>
+        </div>
+    </footer>
+</body>
+</html>
