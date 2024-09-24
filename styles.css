@@ -440,52 +440,73 @@ button:hover, .btn:hover, .learn-more-btn:hover {
 }
 
 /* Footer Section */
-.footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 40px 20px;
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
 }
 
-.footer-container {
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     flex-wrap: wrap;
 }
 
 .footer-logo img {
-    width: 150px;
+    max-width: 150px;
+    height: auto;
 }
 
-.footer-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-links a {
-    color: white;
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #bdc3c7;
     text-decoration: none;
-    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.footer-links ul li a:hover {
+    color: #ecf0f1;
 }
 
-.footer-social {
-    display: flex;
-    gap: 15px;
+.social-media-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
 }
 
-.footer-social a {
-    color: #d60000;
-    font-size: 20px;
+.social-media-icons a img {
+    width: 30px;
+    height: 30px;
 }
 
-.footer-social a:hover {
-    color: #d60000;
+.social-media-icons a:hover {
+    transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-media-icons {
+        margin-top: 20px;
+    }
+}
+
 
 /* Mobile devices (up to 600px) */
 @media (max-width: 600px) {
@@ -556,19 +577,6 @@ button:hover, .btn:hover, .learn-more-btn:hover {
     .card {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-links {
-        flex-direction: column;
-    }
-
-    .footer-social {
-        gap: 10px;
     }
 }
 
