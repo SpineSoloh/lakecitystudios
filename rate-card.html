@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 900px;
             margin: 20px auto;
@@ -27,13 +29,15 @@
             height: 200px; /* Adjust height as needed */
             margin-bottom: 20px;
         }
+
         h1 {
             text-align: center;
             color: red;
             margin-bottom: 30px;
         }
+
         .card {
-            background-color: #F28C28;
+            background-color: lightgrey;
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-bottom: 20px;
@@ -41,26 +45,96 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 100%; /* Set width to 100% of the container */
         }
+
         .card h2 {
             text-align: center;
             color: #444;
             margin-bottom: 15px;
         }
+
         .card p {
             margin: 5px 0;
             line-height: 1.6;
             color: #555;
         }
+
         .card ul {
             padding-left: 20px; /* Add padding for list items */
         }
+
+        .services-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            max-width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #333;
+            margin: 0 0 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 90%;
+            }
+        }
     </style>
 </head>
+
 <body>
-     <!-- Header Section -->
-     <header>
+    <!-- Header Section -->
+    <header>
         <div class="navbar">
-            <img src="llogo.png" alt="Home" class="logo">
+            <img src="LCLogo.PNG" alt="Home" class="logo">
             <div class="social-media-icons">
                 <a href="https://www.facebook.com" target="_blank">
                     <img src="fb.png" alt="Facebook">
@@ -75,7 +149,7 @@
                     <img src="Tiktok.png" alt="TikTok">
                 </a>
             </div>
-             <ul class="nav-menu">
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="dropdown">
@@ -83,21 +157,56 @@
                     <ul class="dropdown-menu">
                         <li><a href="rate-card.html">Recording Studio</a></li>
                         <li><a href="photography.html">Photography</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Music Courses</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Audio Engineering & Acoustics</a></li>
-                        <li><a href="#">Music Production & Theory</a></li>
-                        <li><a href="#">Management & Music Business</a></li>
+                        <li><a href="ms.html">Music School</a></li>
                     </ul>
                 </li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>     
+            </ul>
         </div>
-    </header>    
+    </header>
+
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">🎤</div>
+                <h3>Music Production</h3>
+                <p>Professional recording, mixing, and mastering services to bring your music to life.</p>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">🎙️</div>
+                <h3>Voice-Over & Dubbing</h3>
+                <p>High-quality voice-over and dubbing for films, commercials, and e-learning projects.</p>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">🎧</div>
+                <h3>Audio Post-Production</h3>
+                <p>Editing, sound design, and ADR services for films, video games, and multimedia.</p>
+            </div>
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">📻</div>
+                <h3>Podcast Production</h3>
+                <p>Professional podcast recording, editing, and production services.</p>
+            </div>
+            <!-- Service Card 5 -->
+            <div class="service-card">
+                <div class="service-icon">🎹</div>
+                <h3>Music for Media</h3>
+                <p>Custom background scores, jingles, and music composition for all types of media.</p>
+            </div>
+            <!-- Service Card 6 -->
+            <div class="service-card">
+                <div class="service-icon">🎼</div>
+                <h3>Workshops & Training</h3>
+                <p>Educational workshops and training programs in music production and audio engineering.</p>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
         <h1>RECORDING STUDIO RATE CARD</h1>
@@ -128,105 +237,26 @@
             <p>Full Production with Own Beat/Hymns: Kshs 6,000</p>
             <p>Beat Production Only (inclusive of choice of instrument(s)): Kshs 7,500</p>
             <p>Video Production (Video Only): Kshs 15,000</p>
-            <p>Full Production (Audio + Video): Kshs 25,000</p>
-            <p>30min Testing-no production (audio recorded for vocal listening but not for editing or giveaway): Kshs 500</p>
+            <p>Full Production (Audio + Video): Kshs 27,000</p>
+            <p>20min Testing-no production (No audio recorded for editing or giveaway): Kshs 1,000</p>
         </div>
 
         <div class="card">
-            <h2>CHOIR (16-30 PEOPLE)</h2>
-            <p>Full Production (Audio): Kshs 15,000</p>
-            <p>Full Production with Own Beat/Hymns: Kshs 9,500</p>
-            <p>Beat Production Only (Inclusive of Choice of Instrument(s)): Kshs 7,500</p>
-            <p>Video Production (Video Only): Kshs 15,000</p>
-            <p>Full Production (Audio + Video): Kshs 30,000</p>
-            <p>20min Testing-no production (audio recorded for vocal tuning but not for editing or giveaway): Kshs 700</p>
+            <h2>MUSICIANS (SINGLE OR GROUPS)</h2>
+            <p>Full Audio Production: Kshs 9,500</p>
+            <p>Audio/Live Performance Video: Kshs 6,000</p>
+            <p>Audio/Live Performance Video + Audio: Kshs 12,000</p>
         </div>
 
         <div class="card">
-            <h2>RECORDING WITH IN-HOUSE BAND AND SINGERS</h2>
-            <p>Recording with an in-house band, for each instrument charge is Ksh 800 per day</p>
-            <p>Instruments available for band:</p>
+            <h2>PRODUCTION ASSISTANCE (Hourly)</h2>
             <ul>
-                <li>Drums / Tango</li>
-                <li>Guitars (Bass/Classic/Electric) Trumpet</li>
-                <li>Saxophone (Tenor/Alto)</li>
-                <li>Violin & Trumpet</li>
-                <li>Piano or Keyboard</li>
-                <li>Back-up Vocals (each singer): Ksh 600 per day</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>BAND/CHOIR REHEARSALS</h2>
-            <p>a) With their own instrument: Kshs 700 per/hour</p>
-            <p>b) With Studio Instruments: Kshs 1,000 per/hour</p>
-            <p>*Video recording & Editing upon request, Kshs 2,500</p>
-        </div>
-
-        <div class="card">
-            <h2>VOICE OVERS (INCLUSIVE OF EDITING FEATURES)</h2>
-            <p>0-2 Minutes (300 or Less words): Kshs 1,200</p>
-            <p>2-5 Minutes (300 - 750 words): Kshs 2,000</p>
-            <p>5-15 Minutes (750 - 2,250 words): Kshs 4,700</p>
-            <p>15-30 Minutes (2250 - 4500 words): Kshs 6,800</p>
-            <p>30-45 Minutes (4500 - 6000 words): Kshs 9,600</p>
-            <p>45-60 Minutes (6000+ words): Kshs 12,000</p>
-        </div>
-
-        <div class="card">
-            <h2>EQUIPMENT LEASING</h2>
-            <p>Keyboard: Kshs 3,000/day</p>
-            <p>Mini Grand Piano: Kshs 10,000/day</p>
-            <p>Mixer 12 Channel: Kshs 4,000/day</p>
-            <p>Guitar & Combo:</p>
-            <ul>
-                <li>Bass: Kshs 2,700</li>
-                <li>Electric: Kshs 2,500</li>
-                <li>Acoustic: Kshs 1,500</li>
-                <li>Guitar Effects: Kshs 3,000</li>
-                <li>Guitar Combo: Kshs 4,000</li>
-            </ul>
-            <p>Speakers:</p>
-            <ul>
-                <li>Mid-Range: Kshs 6,000</li>
-                <li>Floor Speakers: Kshs 4,000</li>
-                <li>Bass Speakers: Kshs 5,000</li>
-            </ul>
-            <p>Drums:</p>
-            <ul>
-                <li>Acoustic: Kshs 7,000</li>
-                <li>Conga Drums: Kshs 2,000</li>
-            </ul>
-            <p>Microphones:</p>
-            <ul>
-                <li>Cordless: Kshs 3,000</li>
-                <li>BOOM Mics: Kshs 2,000</li>
-                <li>Cable Mics Dynamic: Kshs 2,000</li>
-            </ul>
-            <p>DJ Controller (DDJ-FLX6): Kshs 8,500/day</p>
-            <p>PA System Services:</p>
-            <ul>
-                <li>Full PA System (For Hire, including DJ): Kshs 35,000</li>
-                <li>Full PA System (For Hire, including Photography and Video Services): Kshs 55,000</li>
-            </ul>
-            <p>NOTE: Deposit of 70% to be Paid before releasing the equipment.</p>
-        </div>
-
-        <div class="card">
-            <h2>PODCAST</h2>
-            <p>Podcast Recording INCLUDED: Kshs 700 (In-Studio) / Kshs 1,700 (Outdoor)</p>
-            <p>A knowledgeable staff member will lead you & your guests to your recording room where your mics will be set up according to your request. They will provide you with any add-ons you purchased and put the SD card in the audio recorder. At the end of the session they will return to stop recording and give you your file. Please bring a Micro SD & SD card for your recordings, or they will be provided for Kshs 2,000 fee.</p>
-            <p>Add-Ons:</p>
-            <ul>
-                <li>IN SESSION ENGINEER: Kshs 1,000/HOUR</li>
-                <li>CAMERA RENTAL: Kshs 900/CAMERA</li>
-                <li>POST PRODUCTION: Kshs 1,500/HOUR</li>
-                <li>UPLOAD LOGO TO TV SCREEN: Kshs 200</li>
-                <li>GREEN SCREEN: Kshs 1,500</li>
-                <li>SPECIAL LIGHTING: Kshs 300</li>
-                <li>MICRO SD, SD & ADAPTER: Kshs 2,000</li>
+                <li>Studio Access (Hourly): Kshs 1,500</li>
+                <li>Studio Access (Half Day - 4hrs): Kshs 5,000</li>
+                <li>Studio Access (Full Day - 8hrs): Kshs 10,000</li>
             </ul>
         </div>
     </div>
 </body>
+
 </html>
