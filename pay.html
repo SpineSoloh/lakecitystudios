@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Items and Pay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #4CAF50;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu li a {
+    color: white;
+}
+
+.social-media-icons img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.social-media-icons a {
+    color: white;
+}
+
+/* Item List and Payment Section */
+/* Updated styles for item-list-container */
+.item-list-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%; /* Increased width to make it standard */
+    max-width: 1200px; /* Cap the maximum width */
+    margin-top: 20px;
+}
+
+/* Updated item-list cards to have a more stylish look */
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item-list-container {
+        width: 90%;
+    }
+    
+    .item-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.item-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.item-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.total-container {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pay-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links ul li {
+    margin-right: 20px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media-icons img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+</style>
+<body>
+
+    <header></header>
+        <div class="navbar">
+            <img src="LCLogo.PNG" alt="Home" class="logo">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="Tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rate-card.html">Recording Studio</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="item-list-container">
+        <h1>Select Items</h1>
+        <form id="itemForm">
+            <ul class="item-list">
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="10" id="item1">
+                    <label for="item1">Instrumental Training - $10.00</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="15.5" id="item2">
+                    <label for="item2">Voice Lessons - $15.50</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="20" id="item3">
+                    <label for="item3">Music theory & Composition - $20.00</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="8.75" id="item4">
+                    <label for="item4">Music Production & Technology - $8.75</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="12" id="item5">
+                    <label for="item5">Performance Arts - $12.00</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="18.99" id="item6">
+                    <label for="item6">Jazz, Classical, and Contemporary Programs - $18.99</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="18.99" id="item6">
+                    <label for="item6">Masterclasses & Workshops - $18.99</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="item-checkbox" data-price="18.99" id="item6">
+                    <label for="item6">Examinations and Certifications - $18.99</label>
+                </li>
+            </ul>
+            <div class="total-container">
+                <span>Total: $<span id="totalAmount">0.00</span></span>
+            </div>
+            <button type="button" class="pay-button" id="payButton">Make Payment</button>
+        </form>
+    </div>
+
+    <footer></footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="LCLogo.PNG" alt="LakeCity Studio Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rate-card.html">Services</a></li>
+                    <li><a href="ms.html">Music School</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="Tiktok.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
