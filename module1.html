@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instrumental Training Modules</title>
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+    /* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.module-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.module-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the accordion buttons (module titles) */
+.accordion {
+    background-color: #00897b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.accordion:hover {
+    background-color: #00695c;
+}
+
+.accordion:after {
+    content: '\002B'; /* Add '+' symbol */
+    color: white;
+    float: right;
+    font-weight: bold;
+}
+
+.accordion.active:after {
+    content: "\2212"; /* Add '-' symbol */
+}
+
+/* Panel for accordion content */
+.panel {
+    padding: 0 15px;
+    background-color: #e0f7fa;
+    display: none;
+    overflow: hidden;
+    border-left: 5px solid #00897b;
+    border-radius: 0 0 4px 4px;
+}
+
+.panel p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.footer {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-contact {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+}
+
+.social-media-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.social-media-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Ensure responsive design */
+@media (max-width: 600px) {
+    .module-container {
+        padding: 15px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="LCLogo.PNG" alt="Home" class="logo">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/p/Lake-City-Recording-Studio-100093402713025/?_rdr" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://youtube.com/@lakecityrecordingstudio?si=smhKWUY3ciAPHYtf" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/lakecityrecordingstudio/reel/C1FNhxpK1JD/" target="_blank">
+                    <img src="inst.png" alt="IG">
+                </a>
+                <a href="https://www.tiktok.com/@lakecityrecordingstudio?_t=8q30lWrkFXh&_r=1" target="_blank">
+                    <img src="Tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rate-card.html">Recording Studio</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="module-container">
+        <h1>Instrumental Training Modules</h1>
+        <p>Instrumental Training typically covers a range of modules designed to enhance both technical proficiency and musicality. Click on the modules below to expand and view details:</p>
+
+        <!-- Module 01 -->
+        <div class="module-card">
+            <button class="accordion">Module 01: Basic Techniques</button>
+            <div class="panel">
+                <p>This focuses on mastering the foundational skills of the instrument, such as posture, hand positioning, and sound production. These early lessons are crucial, just like setting the right foundation in other fields, whether it’s developing Python skills or implementing cybersecurity protocols.</p>
+            </div>
+        </div>
+
+        <!-- Module 02 -->
+        <div class="module-card">
+            <button class="accordion">Module 02: Scales and Arpeggios</button>
+            <div class="panel">
+                <p>These exercises train dexterity and familiarity with the instrument. Similar to building blocks in programming, they are repetitive but essential for fluidity.</p>
+            </div>
+        </div>
+
+        <!-- Module 03 -->
+        <div class="module-card">
+            <button class="accordion">Module 03: Music Theory Application</button>
+            <div class="panel">
+                <p>Understanding how music theory connects with the instrument, from chord progressions to scales. Much like how one must understand core networking protocols before troubleshooting more complex systems, this theory reinforces practical knowledge.</p>
+            </div>
+        </div>
+
+        <!-- Module 04 -->
+        <div class="module-card">
+            <button class="accordion">Module 04: Repertoire Study</button>
+            <div class="panel">
+                <p>Students work on pieces from various genres, refining their interpretation and performance techniques. Think of this as selecting and refining different "projects" — like in coding or cybersecurity — where each requires unique approaches but builds on fundamental skills.</p>
+            </div>
+        </div>
+
+        <!-- Module 05 -->
+        <div class="module-card">
+            <button class="accordion">Module 05: Ensemble Work</button>
+            <div class="panel">
+                <p>Playing in groups, either in duets, trios, or larger ensembles, teaches musicians the importance of timing and cooperation, akin to how collaboration is critical in multi-disciplinary projects.</p>
+            </div>
+        </div>
+
+        <!-- Module 06 -->
+        <div class="module-card">
+            <button class="accordion">Module 06: Improvisation and Composition</button>
+            <div class="panel">
+                <p>Some courses offer creative freedom to develop one’s style, akin to experimenting with code to create innovative solutions.</p>
+            </div>
+        </div>
+
+        <!-- Module 07 -->
+        <div class="module-card">
+            <button class="accordion">Module 07: Performance Practice</button>
+            <div class="panel">
+                <p>Training to perform in front of an audience, managing stage presence and nerves, is often included. This can be compared to presenting a project or report, where the polish and clarity of delivery matter as much as the content.</p>
+            </div>
+        </div>
+    </div>
+
+    <<footer id="contact" class="section footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your musical journey? Get in touch to learn more or schedule a tour of our facilities.</p>
+                    <p>Email: <a href="mailto:info@lakecitystudios.co.ke">info@lakecitystudios.co.ke</a></p>
+                    <p>Phone: +254717712702 / +254781348920</p>
+                </div>
+    
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <img src="LCLogo.PNG" alt="LakeCity Studio Logo">
+                </div>
+    
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rate-card.html">Services</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Icons -->
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="fb.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="x.png" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="yt.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank">
+                        <img src="Tiktok.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LakeCity Studios. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle between adding/removing the "active" class
+                this.classList.toggle("active");
+        
+                // Toggle between hiding/showing the panel
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        </script>
+        
+</body>
+</html>

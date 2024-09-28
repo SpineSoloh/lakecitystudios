@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instrumental Training Modules</title>
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+    /* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.module-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.module-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the accordion buttons (module titles) */
+.accordion {
+    background-color: #00897b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.accordion:hover {
+    background-color: #00695c;
+}
+
+.accordion:after {
+    content: '\002B'; /* Add '+' symbol */
+    color: white;
+    float: right;
+    font-weight: bold;
+}
+
+.accordion.active:after {
+    content: "\2212"; /* Add '-' symbol */
+}
+
+/* Panel for accordion content */
+.panel {
+    padding: 0 15px;
+    background-color: #e0f7fa;
+    display: none;
+    overflow: hidden;
+    border-left: 5px solid #00897b;
+    border-radius: 0 0 4px 4px;
+}
+
+.panel p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.footer {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-contact {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+}
+
+.social-media-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.social-media-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Ensure responsive design */
+@media (max-width: 600px) {
+    .module-container {
+        padding: 15px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="LCLogo.PNG" alt="Home" class="logo">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/p/Lake-City-Recording-Studio-100093402713025/?_rdr" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://youtube.com/@lakecityrecordingstudio?si=smhKWUY3ciAPHYtf" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/lakecityrecordingstudio/reel/C1FNhxpK1JD/" target="_blank">
+                    <img src="inst.png" alt="IG">
+                </a>
+                <a href="https://www.tiktok.com/@lakecityrecordingstudio?_t=8q30lWrkFXh&_r=1" target="_blank">
+                    <img src="Tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rate-card.html">Recording Studio</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="module-container">
+        <h1>Music Theory and Composition Modules</h1>
+        <p>Music Theory and Composition courses encompass a variety of modules designed to deepen understanding of music fundamentals and enhance composition skills. Click on the modules below to expand and view details:</p>
+    
+        <h2>Music Theory Modules</h2>
+    
+        <!-- Fundamentals of Music -->
+        <div class="module-card">
+            <button class="accordion">Fundamentals of Music</button>
+            <div class="panel">
+                <p><strong>Notation:</strong> Understanding musical symbols, staffs, clefs, and basic rhythmic values.</p>
+                <p><strong>Rhythm and Meter:</strong> Exploring different time signatures, note values, and rhythmic patterns.</p>
+            </div>
+        </div>
+    
+        <!-- Scales and Intervals -->
+        <div class="module-card">
+            <button class="accordion">Scales and Intervals</button>
+            <div class="panel">
+                <p><strong>Major and Minor Scales:</strong> Learning the construction and characteristics of major, natural minor, harmonic minor, and melodic minor scales.</p>
+                <p><strong>Intervals:</strong> Identifying and building intervals, understanding their qualities (perfect, major, minor, augmented, diminished).</p>
+            </div>
+        </div>
+    
+        <!-- Chords and Harmony -->
+        <div class="module-card">
+            <button class="accordion">Chords and Harmony</button>
+            <div class="panel">
+                <p><strong>Triads and Seventh Chords:</strong> Building and identifying triads and various seventh chords.</p>
+                <p><strong>Chord Progressions:</strong> Understanding common chord progressions and their functions (e.g., I-IV-V-I).</p>
+            </div>
+        </div>
+    
+        <!-- Keys and Modulation -->
+        <div class="module-card">
+            <button class="accordion">Keys and Modulation</button>
+            <div class="panel">
+                <p><strong>Key Signatures:</strong> Recognizing and writing key signatures.</p>
+                <p><strong>Modulation:</strong> Techniques for changing keys within a piece.</p>
+            </div>
+        </div>
+    
+        <!-- Melody and Phrase Structure -->
+        <div class="module-card">
+            <button class="accordion">Melody and Phrase Structure</button>
+            <div class="panel">
+                <p><strong>Melodic Construction:</strong> Creating melodies using scales and intervals.</p>
+                <p><strong>Phrase and Form:</strong> Analyzing musical forms (binary, ternary, sonata form, etc.) and understanding phrases.</p>
+            </div>
+        </div>
+    
+        <!-- Counterpoint -->
+        <div class="module-card">
+            <button class="accordion">Counterpoint</button>
+            <div class="panel">
+                <p><strong>Species Counterpoint:</strong> Learning the rules of counterpoint in different species (first species, second species, etc.).</p>
+                <p><strong>Contrapuntal Techniques:</strong> Exploring techniques like imitation, inversion, and retrograde.</p>
+            </div>
+        </div>
+    
+        <!-- Texture and Timbre -->
+        <div class="module-card">
+            <button class="accordion">Texture and Timbre</button>
+            <div class="panel">
+                <p><strong>Musical Textures:</strong> Understanding different textures (monophonic, homophonic, polyphonic) and their effects.</p>
+                <p><strong>Instrumentation and Timbre:</strong> Studying the characteristics of different instruments and how they contribute to texture.</p>
+            </div>
+        </div>
+    
+        <!-- Analysis of Musical Works -->
+        <div class="module-card">
+            <button class="accordion">Analysis of Musical Works</button>
+            <div class="panel">
+                <p><strong>Formal Analysis:</strong> Analyzing pieces of music for form, harmony, and melody.</p>
+                <p><strong>Historical Context:</strong> Understanding the historical and cultural background of different musical styles.</p>
+            </div>
+        </div>
+    
+        <h2>Composition Modules</h2>
+    
+        <!-- Basic Composition Techniques -->
+        <div class="module-card">
+            <button class="accordion">Basic Composition Techniques</button>
+            <div class="panel">
+                <p><strong>Writing Melodies:</strong> Developing skills in crafting memorable melodies.</p>
+                <p><strong>Chord Progressions:</strong> Learning how to create effective harmonic structures.</p>
+            </div>
+        </div>
+    
+        <!-- Arranging and Orchestration -->
+        <div class="module-card">
+            <button class="accordion">Arranging and Orchestration</button>
+            <div class="panel">
+                <p><strong>Instrument Roles:</strong> Understanding how different instruments function in an ensemble.</p>
+                <p><strong>Score Preparation:</strong> Learning how to prepare a score for various instrumentations.</p>
+            </div>
+        </div>
+    
+        <!-- Lyric Writing (for vocal music) -->
+        <div class="module-card">
+            <button class="accordion">Lyric Writing (for vocal music)</button>
+            <div class="panel">
+                <p><strong>Song Structure:</strong> Understanding typical song forms and the relationship between lyrics and music.</p>
+                <p><strong>Writing Effective Lyrics:</strong> Techniques for writing compelling and singable lyrics.</p>
+            </div>
+        </div>
+    
+        <!-- Advanced Composition Techniques -->
+        <div class="module-card">
+            <button class="accordion">Advanced Composition Techniques</button>
+            <div class="panel">
+                <p><strong>Thematic Development:</strong> Techniques for developing and transforming musical ideas.</p>
+                <p><strong>Using Non-Traditional Scales:</strong> Exploring modes, pentatonic scales, and microtonality.</p>
+            </div>
+        </div>
+    
+        <!-- Music Technology and Notation Software -->
+        <div class="module-card">
+            <button class="accordion">Music Technology and Notation Software</button>
+            <div class="panel">
+                <p><strong>DAWs (Digital Audio Workstations):</strong> Introduction to using software for composing and producing music.</p>
+                <p><strong>Notation Software:</strong> Learning how to use notation software like Sibelius or Finale for scoring compositions.</p>
+            </div>
+        </div>
+    
+        <!-- Music Production and Recording Techniques -->
+        <div class="module-card">
+            <button class="accordion">Music Production and Recording Techniques</button>
+            <div class="panel">
+                <p><strong>Basic Recording Techniques:</strong> Understanding how to record and produce music effectively.</p>
+                <p><strong>Mixing and Mastering:</strong> Learning the basics of mixing tracks for clarity and cohesion.</p>
+            </div>
+        </div>
+    
+        <!-- Collaboration and Feedback -->
+        <div class="module-card">
+            <button class="accordion">Collaboration and Feedback</button>
+            <div class="panel">
+                <p><strong>Workshops and Peer Review:</strong> Engaging in group critiques to develop and refine compositions.</p>
+                <p><strong>Collaborative Projects:</strong> Opportunities to collaborate with other musicians, lyricists, or composers.</p>
+            </div>
+        </div>
+    
+        <!-- Portfolio Development -->
+        <div class="module-card">
+            <button class="accordion">Portfolio Development</button>
+            <div class="panel">
+                <p><strong>Creating a Portfolio:</strong> Compiling works to showcase your composition skills.</p>
+                <p><strong>Performance Opportunities:</strong> Finding opportunities to have works performed or recorded.</p>
+            </div>
+        </div>
+    </div>    
+
+    <footer id="contact" class="section footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your musical journey? Get in touch to learn more or schedule a tour of our facilities.</p>
+                    <p>Email: <a href="mailto:info@lakecitystudios.co.ke">info@lakecitystudios.co.ke</a></p>
+                    <p>Phone: +254717712702 / +254781348920</p>
+                </div>
+    
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <img src="LCLogo.PNG" alt="LakeCity Studio Logo">
+                </div>
+    
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rate-card.html">Services</a></li>
+                        <li><a href="ms.html">Music School</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Icons -->
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="fb.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="x.png" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="yt.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank">
+                        <img src="Tiktok.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LakeCity Studios. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle between adding/removing the "active" class
+                this.classList.toggle("active");
+        
+                // Toggle between hiding/showing the panel
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        </script>
+        
+</body>
+</html>
